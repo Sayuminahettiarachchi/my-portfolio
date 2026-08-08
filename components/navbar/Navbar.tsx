@@ -1,4 +1,3 @@
-
 "use client";
 
 import { useState } from "react";
@@ -21,9 +20,16 @@ export default function Navbar() {
 
         <div className="flex items-center justify-between">
 
-          <h1 className="text-xl font-bold text-cyan-400">
-            SH
-          </h1>
+          {/* Logo + Copyright */}
+          <div className="flex flex-col items-start">
+            <h1 className="text-xl font-bold text-cyan-400">
+              SH
+            </h1>
+
+            <p className="text-[9px] text-gray-400 mt-1">
+              © 2026 All rights reserved.
+            </p>
+          </div>
 
           {/* Desktop navigation */}
           <div className="hidden md:flex gap-6 items-center">
@@ -84,4 +90,3 @@ export default function Navbar() {
     </nav>
   );
 }
-
