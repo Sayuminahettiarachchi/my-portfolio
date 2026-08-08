@@ -1,4 +1,4 @@
-```tsx
+
 "use client";
 
 import { useState } from "react";
@@ -19,17 +19,14 @@ export default function Navbar() {
     <nav className="fixed top-0 w-full bg-slate-950 text-white z-50 px-6 py-4">
       <div className="max-w-6xl mx-auto">
 
-        {/* Top row */}
         <div className="flex items-center justify-between">
 
-          {/* Logo */}
           <h1 className="text-xl font-bold text-cyan-400">
             SH
           </h1>
 
-          {/* Desktop menu */}
+          {/* Desktop navigation */}
           <div className="hidden md:flex gap-6 items-center">
-
             {navItems.map((item) => (
               <a
                 key={item.name}
@@ -46,7 +43,6 @@ export default function Navbar() {
             >
               LET'S TALK
             </a>
-
           </div>
 
           {/* Mobile menu button */}
@@ -60,10 +56,9 @@ export default function Navbar() {
 
         </div>
 
-        {/* Mobile menu */}
+        {/* Mobile navigation */}
         {menuOpen && (
           <div className="md:hidden flex flex-col gap-4 mt-5 pb-2">
-
             {navItems.map((item) => (
               <a
                 key={item.name}
@@ -82,7 +77,6 @@ export default function Navbar() {
             >
               LET'S TALK
             </a>
-
           </div>
         )}
 
@@ -90,4 +84,4 @@ export default function Navbar() {
     </nav>
   );
 }
-```
+
