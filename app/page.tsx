@@ -6,40 +6,52 @@ import Certifications from "@/components/certifications/Certifications";
 import Projects from "@/components/Projects/Projects";
 import Contact from "@/components/contact/Contact";
 
+
 export default function Home() {
+
   return (
-    <>
+
+    <main className="bg-[#020617]">
+
       <Navbar />
 
-      <main>
-        <Hero />
+      <Hero />
 
-        <About />
+      <About />
 
-        <Skills />
+      <Skills />
 
-        <Certifications />
+      <Certifications />
 
-        {/* FULL WIDTH THIN CYAN DIVIDER */}
-        <div className="w-full my-6">
-          <div className="h-[1px] w-full bg-cyan-400"></div>
+
+      {/* FULL WIDTH THIN CYAN DIVIDER */}
+
+      <div
+        className="
+        w-full
+        my-6
+        "
+      >
+
+        <div
+          className="
+          h-[1px]
+          w-full
+          bg-cyan-400
+          "
+        >
+
         </div>
 
-        <Projects />
+      </div>
 
-        <Contact />
-      </main>
 
-      {/* FOOTER */}
-      <footer className="bg-[#020617] text-gray-400 py-8 text-center">
-        <p>
-          © 2026 Sayumina Hettiarachchi. All rights reserved.
-        </p>
+      <Projects />
 
-        <p className="mt-2 text-sm">
-          Designed & Developed in Sri Lanka.
-        </p>
-      </footer>
-    </>
+      <Contact />
+
+    </main>
+
   );
+
 }
