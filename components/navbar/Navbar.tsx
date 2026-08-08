@@ -18,19 +18,14 @@ export default function Navbar() {
     <nav className="fixed top-0 w-full bg-slate-950 text-white z-50 px-6 py-4">
       <div className="max-w-6xl mx-auto">
 
+        {/* Top row */}
         <div className="flex items-center justify-between">
 
-          {/* Logo + Copyright */}
+          {/* Logo ONLY */}
           <div className="flex flex-col items-start">
             <h1 className="text-xl font-bold text-cyan-400">
               SH
             </h1>
-
-         <div className="flex flex-col items-start">
-  <h1 className="text-xl font-bold text-cyan-400">
-    SH
-  </h1>
-</div>
           </div>
 
           {/* Desktop navigation */}
