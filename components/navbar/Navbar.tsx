@@ -26,9 +26,11 @@ export default function Navbar() {
               SH
             </h1>
 
-            <p className="text-[9px] text-gray-400 mt-1">
-              © 2026 All rights reserved.
-            </p>
+         <div className="flex flex-col items-start">
+  <h1 className="text-xl font-bold text-cyan-400">
+    SH
+  </h1>
+</div>
           </div>
 
           {/* Desktop navigation */}
