@@ -4,55 +4,53 @@ import Link from "next/link";
 
 export default function Navbar() {
   return (
-    <nav className="w-full bg-[#020617]">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 py-4 flex flex-col sm:flex-row items-center justify-between gap-4">
-        
+    <nav className="w-full bg-[#020617] py-4">
+      <div className="mx-auto flex max-w-7xl items-center justify-between px-6">
         {/* Logo */}
         <Link
           href="/"
-          className="text-2xl font-bold text-white whitespace-nowrap"
+          className="text-2xl font-bold text-white"
         >
           Sayumina
         </Link>
 
         {/* Navigation */}
-        <div className="flex flex-wrap justify-center gap-x-4 gap-y-2 sm:gap-x-6">
+        <div className="flex gap-6">
           <Link
             href="/"
-            className="text-white hover:text-blue-400 whitespace-nowrap"
+            className="text-white hover:text-blue-400"
           >
             Home
           </Link>
 
           <Link
-            href="/about"
-            className="text-white hover:text-blue-400 whitespace-nowrap"
+            href="/#about"
+            className="text-white hover:text-blue-400"
           >
             About
           </Link>
 
           <Link
-            href="/projects"
-            className="text-white hover:text-blue-400 whitespace-nowrap"
+            href="/#projects"
+            className="text-white hover:text-blue-400"
           >
             Projects
           </Link>
 
           <Link
-            href="/skills"
-            className="text-white hover:text-blue-400 whitespace-nowrap"
+            href="/#skills"
+            className="text-white hover:text-blue-400"
           >
             Skills
           </Link>
 
           <Link
-            href="/contact"
-            className="text-white hover:text-blue-400 whitespace-nowrap"
+            href="/#contact"
+            className="text-white hover:text-blue-400"
           >
             Contact
           </Link>
         </div>
-
       </div>
     </nav>
   );

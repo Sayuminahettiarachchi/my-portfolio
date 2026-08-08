@@ -12,16 +12,20 @@ export default function Home() {
       <Navbar />
 
       <main>
+        {/* HERO */}
         <Hero />
 
+        {/* ABOUT */}
         <section id="about">
           <About />
         </section>
 
+        {/* SKILLS */}
         <section id="skills">
           <Skills />
         </section>
 
+        {/* CERTIFICATIONS */}
         <Certifications />
 
         {/* FULL WIDTH THIN CYAN DIVIDER */}
@@ -29,17 +33,19 @@ export default function Home() {
           <div className="h-[1px] w-full bg-cyan-400"></div>
         </div>
 
+        {/* PROJECTS */}
         <section id="projects">
           <Projects />
         </section>
 
+        {/* CONTACT */}
         <section id="contact">
           <Contact />
         </section>
       </main>
 
       {/* FOOTER */}
-      <footer className="bg-[#020617] text-gray-400 py-8 text-center">
+      <footer className="bg-[#020617] py-8 text-center text-gray-400">
         <p>
           © 2026 Sayumina Hettiarachchi. All rights reserved.
         </p>
