@@ -1,87 +1,37 @@
 "use client";
 
-import { useState } from "react";
+import Link from "next/link";
 
 export default function Navbar() {
-  const [menuOpen, setMenuOpen] = useState(false);
-
-  const navItems = [
-    { name: "HOME", link: "/" },
-    { name: "ABOUT ME", link: "#about" },
-    { name: "SKILLS", link: "#skills" },
-    { name: "CERTIFICATIONS", link: "#certifications" },
-    { name: "PROJECTS", link: "#projects" },
-    { name: "CONTACT", link: "#contact" },
-  ];
-
   return (
-    <nav className="fixed top-0 w-full bg-slate-950 text-white z-50 px-6 py-4">
-      <div className="max-w-6xl mx-auto">
+    <nav className="fixed top-0 left-0 right-0 z-50 bg-black/80 backdrop-blur-md">
+      <div className="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
+        
+        <Link href="/" className="text-2xl font-bold text-white">
+          Sayumina
+        </Link>
 
-        {/* Top row */}
-        <div className="flex items-center justify-between">
+        <div className="flex gap-6">
+          <Link href="/" className="text-white hover:text-blue-400">
+            Home
+          </Link>
 
-          {/* Logo ONLY */}
-          <div className="flex flex-col items-start">
-            <h1 className="text-xl font-bold text-cyan-400">
-              SH
-            </h1>
-          </div>
+          <Link href="/about" className="text-white hover:text-blue-400">
+            About
+          </Link>
 
-          {/* Desktop navigation */}
-          <div className="hidden md:flex gap-6 items-center">
-            {navItems.map((item) => (
-              <a
-                key={item.name}
-                href={item.link}
-                className="hover:text-cyan-400 transition"
-              >
-                {item.name}
-              </a>
-            ))}
+          <Link href="/projects" className="text-white hover:text-blue-400">
+            Projects
+          </Link>
 
-            <a
-              href="#contact"
-              className="bg-cyan-400 text-black px-5 py-2 rounded-full font-bold hover:shadow-[0_0_20px_#22d3ee]"
-            >
-              LET'S TALK
-            </a>
-          </div>
+          <Link href="/skills" className="text-white hover:text-blue-400">
+            Skills
+          </Link>
 
-          {/* Mobile menu button */}
-          <button
-            onClick={() => setMenuOpen(!menuOpen)}
-            className="md:hidden text-cyan-400 text-3xl"
-            aria-label="Toggle navigation menu"
-          >
-            {menuOpen ? "✕" : "☰"}
-          </button>
-
+          <Link href="/contact" className="text-white hover:text-blue-400">
+            Contact
+          </Link>
         </div>
-
-        {/* Mobile navigation */}
-        {menuOpen && (
-          <div className="md:hidden flex flex-col gap-4 mt-5 pb-2">
-            {navItems.map((item) => (
-              <a
-                key={item.name}
-                href={item.link}
-                onClick={() => setMenuOpen(false)}
-                className="hover:text-cyan-400 transition"
-              >
-                {item.name}
-              </a>
-            ))}
-
-            <a
-              href="#contact"
-              onClick={() => setMenuOpen(false)}
-              className="bg-cyan-400 text-black px-5 py-2 rounded-full font-bold text-center"
-            >
-              LET'S TALK
-            </a>
-          </div>
-        )}
 
       </div>
     </nav>

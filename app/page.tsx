@@ -9,26 +9,27 @@ import Contact from "@/components/contact/Contact";
 
 export default function Home() {
   return (
-    <main className="bg-[#020617]">
-
+    <>
       <Navbar />
 
-      <Hero />
+      <main>
+        <Hero />
 
-      <About />
+        <About />
 
-      <Skills />
+        <Skills />
 
-      <Certifications />
+        <Certifications />
 
-      {/* FULL WIDTH THIN CYAN DIVIDER */}
-      <div className="w-full my-6">
-        <div className="h-[1px] w-full bg-cyan-400"></div>
-      </div>
+        {/* FULL WIDTH THIN CYAN DIVIDER */}
+        <div className="w-full my-6">
+          <div className="h-[1px] w-full bg-cyan-400"></div>
+        </div>
 
-      <Projects />
+        <Projects />
 
-      <Contact />
+        <Contact />
+      </main>
 
       {/* FOOTER */}
       <footer className="bg-[#020617] text-gray-400 py-8 text-center">
@@ -40,7 +41,6 @@ export default function Home() {
           Designed & Developed in Sri Lanka.
         </p>
       </footer>
-
-    </main>
+    </>
   );
 }
