@@ -1,11 +1,13 @@
+
 "use client";
 
 import Link from "next/link";
 
 export default function Navbar() {
   return (
-    <nav className="w-full bg-[#020617] py-4">
-      <div className="mx-auto flex max-w-7xl items-center justify-between px-6">
+    <nav className="w-full bg-[#020617]">
+      <div className="mx-auto flex max-w-7xl flex-col items-center justify-between gap-4 px-4 py-4 sm:flex-row sm:px-6">
+
         {/* Logo */}
         <Link
           href="/"
@@ -15,42 +17,43 @@ export default function Navbar() {
         </Link>
 
         {/* Navigation */}
-        <div className="flex gap-6">
+        <div className="flex flex-wrap items-center justify-center gap-x-6 gap-y-2">
           <Link
             href="/"
-            className="text-white hover:text-blue-400"
+            className="text-sm text-white hover:text-blue-400 sm:text-base"
           >
             Home
           </Link>
 
           <Link
             href="/#about"
-            className="text-white hover:text-blue-400"
+            className="text-sm text-white hover:text-blue-400 sm:text-base"
           >
             About
           </Link>
 
           <Link
             href="/#projects"
-            className="text-white hover:text-blue-400"
+            className="text-sm text-white hover:text-blue-400 sm:text-base"
           >
             Projects
           </Link>
 
           <Link
             href="/#skills"
-            className="text-white hover:text-blue-400"
+            className="text-sm text-white hover:text-blue-400 sm:text-base"
           >
             Skills
           </Link>
 
           <Link
             href="/#contact"
-            className="text-white hover:text-blue-400"
+            className="text-sm text-white hover:text-blue-400 sm:text-base"
           >
             Contact
           </Link>
         </div>
+
       </div>
     </nav>
   );
