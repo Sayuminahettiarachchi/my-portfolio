@@ -1,4 +1,4 @@
-
+import Navbar from "@/components/navbar/Navbar";
 import Hero from "@/components/hero/Hero";
 import About from "@/components/about/About";
 import Skills from "@/components/skills/Skills";
@@ -9,36 +9,28 @@ import Contact from "@/components/contact/Contact";
 export default function Home() {
   return (
     <>
+      <Navbar />
+
       <main>
-        <section id="home">
-          <Hero />
-        </section>
+        <Hero />
 
-        <section id="about">
-          <About />
-        </section>
+        <About />
 
-        <section id="skills">
-          <Skills />
-        </section>
+        <Skills />
 
-        <section id="certifications">
-          <Certifications />
-        </section>
+        <Certifications />
 
+        {/* FULL WIDTH THIN CYAN DIVIDER */}
         <div className="w-full my-6">
           <div className="h-[1px] w-full bg-cyan-400"></div>
         </div>
 
-        <section id="projects">
-          <Projects />
-        </section>
+        <Projects />
 
-        <section id="contact">
-          <Contact />
-        </section>
+        <Contact />
       </main>
 
+      {/* FOOTER */}
       <footer className="bg-[#020617] text-gray-400 py-8 text-center">
         <p>
           © 2026 Sayumina Hettiarachchi. All rights reserved.
