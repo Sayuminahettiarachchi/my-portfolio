@@ -24,11 +24,11 @@ export default function Projects() {
 
   return (
     <section
-      id="projects"
-      className="min-h-screen bg-[#020617] text-white px-6 py-16"
-    >
+  id="projects"
+  className="bg-[#020617] text-white px-6 py-10"
+>
       <div className="max-w-6xl mx-auto">
-        <h2 className="text-5xl font-bold text-center mb-12">
+       <h2 className="text-4xl font-bold text-center mb-6">
           MY <span className="text-cyan-400">PROJECTS</span>
         </h2>
 
