@@ -1,4 +1,4 @@
-```tsx
+
 import {
   FaLaptopCode,
   FaServer,
@@ -213,4 +213,4 @@ export default function Skills() {
     </section>
   );
 }
-```
+
