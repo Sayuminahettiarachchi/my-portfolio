@@ -29,20 +29,7 @@ const skillCategories = [
 },
 
 
-{
-  number: "02",
-  title: "BACKEND",
-  subtitle: "Backend Development",
-  icon: <FaServer />,
-  description:
-    "Engineering secure, robust, and scalable backend logic for modern applications.",
-  skills: [
-    "Node.js",
-    "Express",
-    "Java",
-    "REST APIs",
-  ],
-},
+
 
 
 {
