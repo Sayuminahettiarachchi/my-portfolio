@@ -15,8 +15,7 @@ export default function Skills() {
       title: "PROGRAMMING",
       subtitle: "Programming Languages",
       icon: <FaLaptopCode />,
-      description:
-        "Building applications and solving problems using multiple programming languages.",
+      
       skills: [
         "Python",
         "Java",
