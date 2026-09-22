@@ -36,7 +36,7 @@ export default function Certifications() {
  {
   image: "/certificates/coventry/bsc.jpg",
   title: "BSc (Hons) Computer Science with Artificial Intelligence",
-  organization: "Coventry University",
+  organization: "NIBM/Coventry University",
   description: "Expected completion: 2027–2028",
 },
 
