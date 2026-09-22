@@ -15,17 +15,16 @@ const skillCategories = [
 
 {
   number: "01",
-  title: "FRONTEND",
-  subtitle: "Frontend Development",
+  title: "💻 Programming",
   icon: <FaLaptopCode />,
   description:
-    "Building modern, interactive, and responsive web applications with a focus on component structure and performance.",
+    
   skills: [
-    "React",
-    "Next.js",
-    "CSS",
-    "Tailwind CSS",
-    "Responsive Design",
+    "Python",
+    "Java",
+    "C++",
+    "JavaScript",
+    "TypeScript",
   ],
 },
 
