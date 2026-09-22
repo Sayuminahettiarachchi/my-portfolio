@@ -33,32 +33,14 @@ export default function Certifications() {
     },
 
 
-    {
-      image: "/certificates/english/certificate1.jpg",
-      title: "English diploma level 1 ",
-      organization: "American College",
-      description:
-     "Completed Level 1 English diploma training focused on improving basic grammar, vocabulary, reading, writing, and everyday communication skills.",
-    },
+ {
+  image: "/certificates/coventry/bsc.jpg",
+  title: "BSc (Hons) Computer Science with Artificial Intelligence",
+  organization: "Coventry University",
+  description: "Expected completion: 2027–2028",
+},
 
-
-    {
-      image: "/certificates/english/certificate2.jpg",
-      title: "English diploma level 3  ",
-      organization: "American College",
-      description:
-      "Completed Level 3 English diploma training with advanced focus on communication skills, professional writing, grammar accuracy, and confident language usage.",
-    },
-
-
-    {
-      image: "/certificates/english/certificate3.jpg",
-      title: "public speaking ",
-      organization: "American College",
-      description:
-      "Developed public speaking, presentation, and communication skills with improved confidence in delivering ideas effectively in professional environments.",
-    },
-
+    
 
   ];
 
