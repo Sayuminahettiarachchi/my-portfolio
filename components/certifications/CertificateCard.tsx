@@ -43,7 +43,7 @@ export default function CertificateCard({
 
         className="
         w-full
-        h-52
+        h-40
         object-contain
         rounded-2xl
         bg-black
