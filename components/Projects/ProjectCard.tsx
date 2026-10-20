@@ -4,6 +4,7 @@ interface ProjectCardProps {
   image: string;
   title: string;
   type: string;
+  description: string;
   github: string;
   live: string;
 }
@@ -12,6 +13,7 @@ export default function ProjectCard({
   image,
   title,
   type,
+  description,
   github,
   live,
 }: ProjectCardProps) {
@@ -25,19 +27,21 @@ export default function ProjectCard({
       />
 
       {/* Project details */}
-      <div className="flex justify-between items-end mt-5">
-        <div>
-          <h3 className="text-white font-bold text-lg">
-            {title}
-          </h3>
+      <div className="mt-5">
+        <h3 className="text-white font-bold text-lg">
+          {title}
+        </h3>
 
-          <p className="text-gray-400 text-sm mt-2">
-            {type}
-          </p>
-        </div>
+        <p className="text-cyan-400 text-xs font-semibold mt-2">
+          {type}
+        </p>
+
+        <p className="text-gray-300 text-sm mt-3 leading-relaxed">
+          {description}
+        </p>
 
         {/* Icon links */}
-        <div className="flex gap-3">
+        <div className="flex gap-3 mt-5">
           <a
             href={github}
             target="_blank"
