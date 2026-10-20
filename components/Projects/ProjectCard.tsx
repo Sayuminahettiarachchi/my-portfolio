@@ -17,15 +17,14 @@ export default function ProjectCard({
 }: ProjectCardProps) {
   return (
     <div className="bg-[#111827] border border-gray-700 rounded-3xl p-5 hover:border-cyan-400 hover:shadow-[0_0_25px_#22d3ee] transition">
-      {/* PROJECT IMAGE */}
-      {/* PROJECT IMAGE */}
-<img
-  src={image}
-  alt=""
-  className="w-full aspect-video object-cover rounded-2xl"
-/>
+      {/* Project image */}
+      <img
+        src={image}
+        alt={`${title} project preview`}
+        className="w-full aspect-video object-cover rounded-2xl"
+      />
 
-      {/* PROJECT DETAILS */}
+      {/* Project details */}
       <div className="flex justify-between items-end mt-5">
         <div>
           <h3 className="text-white font-bold text-lg">
@@ -37,7 +36,7 @@ export default function ProjectCard({
           </p>
         </div>
 
-        {/* ICON BUTTONS */}
+        {/* Icon links */}
         <div className="flex gap-3">
           <a
             href={github}
