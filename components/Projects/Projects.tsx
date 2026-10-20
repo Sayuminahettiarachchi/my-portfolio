@@ -20,6 +20,13 @@ export default function Projects() {
         "https://github.com/Sayuminahettiarachchi/AI-Career-Recommendation",
       live: "https://sayumina.pythonanywhere.com/",
     },
+
+     image: "/projects/Screenshot (917).png",
+      title: "Telecom Intelligence",
+      type: "PREDICTIVE ANALYTICS / CUSTOMER CHURN",
+      github:
+        "https://github.com/Sayuminahettiarachchi/telecom-churn-prediction",
+      live: "#",
   ];
 
   return (
