@@ -18,11 +18,12 @@ export default function ProjectCard({
   return (
     <div className="bg-[#111827] border border-gray-700 rounded-3xl p-5 hover:border-cyan-400 hover:shadow-[0_0_25px_#22d3ee] transition">
       {/* PROJECT IMAGE */}
-      <img
-        src={image}
-        alt={`${title} screenshot`}
-        className="w-full aspect-video object-cover rounded-2xl"
-      />
+      {/* PROJECT IMAGE */}
+<img
+  src={image}
+  alt=""
+  className="w-full aspect-video object-cover rounded-2xl"
+/>
 
       {/* PROJECT DETAILS */}
       <div className="flex justify-between items-end mt-5">
