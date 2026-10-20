@@ -24,7 +24,7 @@ export default function Projects() {
       title: "Telecom Intelligence",
       type: "MACHINE LEARNING / CUSTOMER CHURN",
       github:
-        "https://github.com/Sayuminahettiarachchi/Telecom-Intelligence",
+        "https://github.com/Sayuminahettiarachchi/telecom-churn-prediction",
       live: "#",
     },
   ];
