@@ -6,9 +6,8 @@ export default function Hero() {
 
   const roles = [
     "COMPUTER SCIENCE WITH AI STUDENT",
-    "AI ENTHUSIAST",
-    "WEB DEVELOPER",
-    "MACHINE LEARNING STUDENT",
+     "WEB DEVELOPER",
+    
   ];
 
   const [role, setRole] = useState("");
@@ -55,24 +54,22 @@ export default function Hero() {
       bg-[#020617]
       text-white
       px-6
-      pt-24
+      pt-16
       "
     >
 
 
       <div
         className="
-        max-w-7xl
-        mx-auto
-        min-h-[90vh]
-        grid
-        md:grid-cols-2
-        gap-10
-        items-center
+ max-w-6xl
+ mx-auto
+ min-h-[80vh]
+ grid
+ md:grid-cols-2
+ gap-8
+items-center
         "
       >
-
-
 
         {/* LEFT SIDE */}
 
@@ -92,9 +89,9 @@ export default function Hero() {
 
           <h1
             className="
-            text-4xl
-            md:text-5xl
-            lg:text-6xl
+           text-3xl
+md:text-4xl
+lg:text-5xl
             font-bold
             mt-3
             "
@@ -243,17 +240,18 @@ export default function Hero() {
 
           <div
             className="
-            w-64
-            h-64
-            md:w-80
-            md:h-80
-            lg:w-96
-            lg:h-96
-            rounded-full
-            border-4
-            border-cyan-400
-            shadow-[0_0_40px_#22d3ee]
-            overflow-hidden
+           w-56
+h-56
+md:w-72
+md:h-72
+lg:w-80
+lg:h-80       
+rounded-full
+          
+ border-4
+   border-cyan-400
+        shadow-[0_0_40px_#22d3ee]
+         overflow-hidden
             "
           >
 
