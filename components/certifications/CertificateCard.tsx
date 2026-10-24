@@ -5,8 +5,11 @@ interface CertificateCardProps {
   description: string;
   certificateNo?: string;
   awardDate?: string;
-  highlight?: string; // e.g. "Distinction" or "GPA: 3.20 / 4.00"
-  status?: string; // e.g. "In Progress" or "Expected"
+  highlight?: string;
+  status?: string;
+  gpa?: string;
+  grade?: string;
+  issued?: string;
 }
 
 export default function CertificateCard({
@@ -18,7 +21,13 @@ export default function CertificateCard({
   awardDate,
   highlight,
   status,
+  gpa,
+  grade,
+  issued,
 }: CertificateCardProps) {
+  const achievement = grade || highlight;
+  const currentStatus = issued || status;
+
   return (
     <div
       className="
@@ -33,49 +42,74 @@ export default function CertificateCard({
         transition
       "
     >
-      {/* White image box */}
+      {/* Certificate image */}
       <div className="flex h-56 w-full items-center justify-center overflow-hidden rounded-2xl bg-white p-2">
         {image ? (
           <img
             src={image}
-            alt={title}
+            alt={`${title} certificate`}
             className="max-h-full max-w-full object-contain border border-black"
           />
         ) : (
           <span className="text-sm font-semibold uppercase tracking-widest text-gray-500">
-            {status || "In Progress"}
+            {currentStatus || "In Progress"}
           </span>
         )}
       </div>
 
-      {/* Text */}
+      {/* Certificate details */}
       <div className="mt-5 flex-1">
         <p className="text-cyan-400 text-xs font-semibold uppercase tracking-widest">
           {organization}
         </p>
-        <h3 className="text-white font-bold text-lg mt-2">{title}</h3>
-        <p className="text-gray-400 text-sm mt-3">{description}</p>
+
+        <h3 className="text-white font-bold text-lg mt-2">
+          {title}
+        </h3>
+
+        <p className="text-gray-400 text-sm mt-3">
+          {description}
+        </p>
       </div>
 
-      {/* Footer */}
-      {(awardDate || highlight || certificateNo) && (
+      {/* Certificate information */}
+      {(awardDate || achievement || gpa || certificateNo || currentStatus) && (
         <div className="mt-5 space-y-2 border-t border-gray-700 pt-4 text-sm text-gray-400">
-          <div className="flex flex-wrap items-center gap-3">
-            {awardDate && (
-              <span>
-                <span className="font-semibold text-gray-300">Awarded:</span>{" "}
-                {awardDate}
-              </span>
-            )}
-            {highlight && (
-              <span className="rounded border border-cyan-400/40 bg-cyan-400/10 px-2 py-0.5 text-xs font-semibold uppercase text-cyan-400">
-                {highlight}
-              </span>
-            )}
-          </div>
+          {awardDate && (
+            <p>
+              <span className="font-semibold text-gray-300">
+                Awarded:
+              </span>{" "}
+              {awardDate}
+            </p>
+          )}
+
+          {gpa && (
+            <p>
+              <span className="font-semibold text-gray-300">
+                GPA:
+              </span>{" "}
+              {gpa}
+            </p>
+          )}
+
+          {achievement && (
+            <span className="inline-block rounded border border-cyan-400/40 bg-cyan-400/10 px-2 py-0.5 text-xs font-semibold uppercase text-cyan-400">
+              {achievement}
+            </span>
+          )}
+
+          {currentStatus && (
+            <p className="text-xs font-semibold text-cyan-400">
+              {currentStatus}
+            </p>
+          )}
+
           {certificateNo && (
             <p className="text-xs">
-              <span className="font-semibold text-gray-300">Certificate No:</span>{" "}
+              <span className="font-semibold text-gray-300">
+                Certificate No:
+              </span>{" "}
               {certificateNo}
             </p>
           )}
