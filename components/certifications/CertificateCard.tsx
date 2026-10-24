@@ -25,72 +25,93 @@ export default function CertificateCard({
   grade,
 }: CertificateCardProps) {
   return (
-    <div className="bg-[#111827] border border-gray-700 rounded-3xl p-5 hover:border-cyan-400 hover:shadow-[0_0_25px_#22d3ee] hover:-translate-y-2 transition">
-      <div className="flex h-56 w-full items-center justify-center overflow-hidden rounded-2xl bg-white p-1">
+    <div className="group flex h-[293px] w-full max-w-[357px] mx-auto flex-col overflow-hidden rounded-[2.5rem] border border-[rgba(45,212,191,0.08)] bg-[#111815] shadow-[0_10px_30px_rgba(0,0,0,0.15)] transition-all duration-300 hover:border-[rgba(45,212,191,0.4)] hover:shadow-[0_10px_30px_rgba(45,212,191,0.08)]">
+
+      {/* Certificate image */}
+      <div className="relative h-[115px] w-full shrink-0 overflow-hidden bg-[#0d1411]">
         {image ? (
           <img
             src={image}
-            alt={title}
-          className="h-full w-full object-contain"
+            alt={`${title} certificate`}
+            className="h-full w-full object-contain p-2 transition-transform duration-300 group-hover:scale-[1.03]"
           />
         ) : (
-          <span className="text-sm font-semibold text-gray-500">
-            {badge || "In progress"}
-          </span>
+          <div className="flex h-full w-full flex-col items-center justify-center gap-2">
+            <div className="flex h-11 w-11 items-center justify-center rounded-full border border-[rgba(45,212,191,0.25)] bg-[rgba(45,212,191,0.08)]">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="22"
+                height="22"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="#2DD4BF"
+                strokeWidth="1.7"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+              >
+                <path d="M12 15l-3.5 2 0.7-4-2.9-2.8 4-.6L12 6l1.7 3.6 4 .6-2.9 2.8.7 4z" />
+                <circle cx="12" cy="12" r="9" />
+              </svg>
+            </div>
+
+            <span className="text-[10px] font-semibold uppercase tracking-[0.18em] text-[#2DD4BF]">
+              {badge || issued || "Academic qualification"}
+            </span>
+          </div>
         )}
       </div>
 
-      <div className="mt-5">
-        <h3 className="text-white font-bold text-lg">{title}</h3>
+      {/* Certificate details */}
+      <div className="flex min-h-0 flex-1 flex-col p-5">
+        <h3 className="line-clamp-2 text-base font-bold leading-snug text-[#F1F5F3]">
+          {title}
+        </h3>
 
-        <p className="text-cyan-400 text-sm mt-2 font-semibold">
+        <p className="mt-2 line-clamp-1 text-[10px] font-semibold uppercase tracking-wider text-[#2DD4BF]">
           {organization}
         </p>
 
-    <div className="min-h-[8px] mt-3">
-  <p className="text-gray-400 text-sm">{description}</p>
-</div>
+        <p className="mt-2 line-clamp-2 text-xs leading-relaxed text-gray-400">
+          {description}
+        </p>
 
-<div className="border-t border-gray-700 my-4" /> 
+        {/* Qualification details */}
+        <div className="mt-auto flex flex-wrap items-center gap-x-3 gap-y-1 border-t border-white/10 pt-3">
+          {awardDate && (
+            <span className="text-[10px] text-gray-400">
+              <span className="font-semibold text-[#2DD4BF]">Awarded:</span>{" "}
+              {awardDate}
+            </span>
+          )}
 
-        {certificateNo && (
-          <p className="text-gray-300 text-sm mt-3">
-            <span className="text-cyan-400 font-semibold">
-              Certificate No:
-            </span>{" "}
-            {certificateNo}
-          </p>
-        )}
+          {gpa && (
+            <span className="text-[10px] text-gray-400">
+              <span className="font-semibold text-[#2DD4BF]">GPA:</span>{" "}
+              {gpa}
+            </span>
+          )}
 
-        {awardDate && (
-          <p className="text-gray-300 text-sm mt-2">
-            <span className="text-cyan-400 font-semibold">
-              Date of Award:
-            </span>{" "}
-            {awardDate}
-          </p>
-        )}
+          {grade && (
+            <span className="text-[10px] font-semibold text-[#2DD4BF]">
+              {grade}
+            </span>
+          )}
 
-        {issued && (
-          <p className="text-gray-300 text-sm mt-2">
-            <span className="text-cyan-400 font-semibold">Issued:</span>{" "}
-            {issued}
-          </p>
-        )}
+          {issued && (
+            <span className="text-[10px] font-semibold text-[#2DD4BF]">
+              {issued}
+            </span>
+          )}
 
-        {gpa && (
-          <p className="text-gray-300 text-sm mt-2">
-            <span className="text-cyan-400 font-semibold">GPA:</span>{" "}
-            {gpa}
-          </p>
-        )}
-
-        {grade && (
-          <p className="text-gray-300 text-sm mt-2">
-            <span className="text-cyan-400 font-semibold">Grade:</span>{" "}
-            {grade}
-          </p>
-        )}
+          {certificateNo && (
+            <span
+              className="w-full truncate text-[9px] text-gray-500"
+              title={certificateNo}
+            >
+              Certificate No: {certificateNo}
+            </span>
+          )}
+        </div>
       </div>
     </div>
   );

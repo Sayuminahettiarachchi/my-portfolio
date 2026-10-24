@@ -1,4 +1,3 @@
-
 import CertificateCard from "./CertificateCard";
 
 interface Certification {
@@ -41,43 +40,49 @@ export default function Certifications() {
       organization: "NIBM",
       description:
         "Currently following Higher National Diploma in Computer Science with AI.",
+      issued: "In Progress",
     },
     {
       title: "BSc (Hons) Computer Science with Artificial Intelligence",
       organization: "NIBM / Coventry University",
       description: "Expected completion: 2027–2028",
+      issued: "Expected",
     },
   ];
 
   return (
     <section
       id="certifications"
-      className="bg-[#020617] text-white px-6 py-10"
+      className="bg-[#0A0F0D] text-[#F1F5F3] px-6 py-16 border-y border-[rgba(45,212,191,0.05)]"
     >
-      <h2 className="text-3xl md:text-4xl font-bold text-center">
-        MY <span className="text-cyan-400">CERTIFICATIONS</span>
-      </h2>
+      <div className="max-w-6xl mx-auto">
+        <div className="text-center mb-12">
+          <h2 className="text-3xl md:text-4xl font-bold">
+            MY <span className="text-[#2DD4BF]">CERTIFICATIONS</span>
+          </h2>
 
-      <p className="text-gray-400 text-center mt-2 text-sm">
-        Academic achievements, communication skills, and continuous learning.
-      </p>
+          <p className="text-gray-400 text-sm mt-3">
+            Academic achievements, communication skills, and continuous learning.
+          </p>
+        </div>
 
-      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5 max-w-5xl mx-auto mt-8">
-        {certifications.map((cert, index) => (
-          <CertificateCard
-            key={index}
-            image={cert.image}
-            title={cert.title}
-            organization={cert.organization}
-            description={cert.description}
-            certificateNo={cert.certificateNo}
-            awardDate={cert.awardDate}
-            issued={cert.issued}
-            badge={cert.badge}
-            gpa={cert.gpa}
-            grade={cert.grade}
-          />
-        ))}
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 max-w-6xl mx-auto">
+          {certifications.map((cert) => (
+            <CertificateCard
+              key={cert.title}
+              image={cert.image}
+              title={cert.title}
+              organization={cert.organization}
+              description={cert.description}
+              certificateNo={cert.certificateNo}
+              awardDate={cert.awardDate}
+              issued={cert.issued}
+              badge={cert.badge}
+              gpa={cert.gpa}
+              grade={cert.grade}
+            />
+          ))}
+        </div>
       </div>
     </section>
   );
