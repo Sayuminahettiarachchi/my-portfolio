@@ -1,4 +1,3 @@
-
 import { FaGithub, FaExternalLinkAlt } from "react-icons/fa";
 
 type ProjectCardProps = {
@@ -17,8 +16,7 @@ export default function ProjectCard({
   live,
 }: ProjectCardProps) {
   return (
-    <div className="group w-full max-w-[357px] h-[293px] mx-auto bg-[#111827] border border-blue-400/10 rounded-[2.5rem] overflow-hidden shadow-[0_10px_30px_rgba(0,0,0,0.15)] hover:border-blue-400/40 hover:shadow-[0_10px_30px_rgba(59,130,246,0.12)] transition-all duration-300">
-
+    <div className="group w-full max-w-[357px] h-[293px] mx-auto  border border-[rgba(45,212,191,0.08)] rounded-[2.5rem] overflow-hidden shadow-[0_10px_30px_rgba(0,0,0,0.15)] hover:border-[rgba(45,212,191,0.4)] hover:shadow-[0_10px_30px_rgba(45,212,191,0.08)] transition-all duration-300">
       {/* Project image */}
       <div className="w-full h-[155px] overflow-hidden">
         <img
@@ -45,9 +43,9 @@ export default function ProjectCard({
             target="_blank"
             rel="noopener noreferrer"
             aria-label={`View ${title} on GitHub`}
-            className="w-9 h-9 rounded-full bg-white/5 border border-white/10 flex items-center justify-center text-[#F1F5F3] hover:bg-blue-400 hover:text-[#0B1120] hover:border-blue-400 transition-all duration-200"
+            className="w-9 h-9 rounded-full bg-white/5 border border-white/10 flex items-center justify-center text-[#F1F5F3]  transition-all duration-200"
           >
-            <FaGithub size={15} />
+            <FaGithub size={15} />hover:bg-blue-400 hover:text-[#0B1120] hover:border-blue-400
           </a>
 
           {live !== "#" && (
@@ -56,7 +54,7 @@ export default function ProjectCard({
               target="_blank"
               rel="noopener noreferrer"
               aria-label={`View ${title} live demo`}
-              className="w-9 h-9 rounded-full bg-white/5 border border-white/10 flex items-center justify-center text-[#F1F5F3] hover:bg-blue-400 hover:text-[#0B1120] hover:border-blue-400 transition-all duration-200"
+              className="w-9 h-9 rounded-full bg-white/5 border border-white/10 flex items-center justify-center text-[#F1F5F3] hover:bg-[#2DD4BF] hover:text-[#0A0F0D] hover:border-[#2DD4BF] transition-all duration-200"
             >
               <FaExternalLinkAlt size={13} />
             </a>
