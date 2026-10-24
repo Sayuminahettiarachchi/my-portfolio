@@ -135,7 +135,7 @@ export default function Skills() {
           IoT, and robotics.
         </p>
 
-        <div className="grid md:grid-cols-2 gap-6 mt-10">
+        <div className="grid md:grid-cols-3 gap-8 mt-10 max-w-5xl mx-auto">
           {skillCategories.map((item, index) => (
             <div
               key={index}

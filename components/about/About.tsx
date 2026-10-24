@@ -4,7 +4,7 @@ export default function About() {
     <section
       id="about"
       className="
-        bg-[#020617]
+       bg-[#070d1a]
         text-white
         px-6
         py-20

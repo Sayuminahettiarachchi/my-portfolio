@@ -4,7 +4,7 @@ export default function Contact() {
   return (
     <section
       id="contact"
-      className="bg-[#020617] text-white px-6 py-20 text-center"
+     className="bg-[#111827] text-white px-6 py-20 text-center"
     >
       <h2 className="text-4xl md:text-5xl font-bold">
         GET IN <span className="text-cyan-400">TOUCH</span>

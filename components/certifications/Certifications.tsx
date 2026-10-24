@@ -52,7 +52,7 @@ export default function Certifications() {
   return (
     <section
       id="certifications"
-      className="bg-[#020617] text-white px-6 pt-16 pb-8"
+     className="bg-[#070d1a] text-white px-6 pt-16 pb-8"
     >
       <h2 className="text-4xl font-bold text-center">
         MY <span className="text-cyan-400">CERTIFICATIONS</span>
