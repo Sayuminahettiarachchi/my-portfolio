@@ -4,7 +4,7 @@ import Hero from "@/components/hero/Hero";
 import About from "@/components/about/About";
 import Skills from "@/components/skills/Skills";
 import Certifications from "@/components/certifications/Certifications";
-import Projects from "@/components/Projects/Projects";
+import Projects from "@/components/projects/Projects";
 import Contact from "@/components/contact/Contact";
 
 export default function Home() {
