@@ -1,10 +1,10 @@
+
 import ProjectCard from "./ProjectCard";
 
 type Project = {
   image: string;
   title: string;
   type: string;
-  description: string;
   github: string;
   live: string;
 };
@@ -15,17 +15,14 @@ export default function Projects() {
       image: "/projects/Meteorite_Landings.png",
       title: "Meteorite Landings Analysis",
       type: "DATA SCIENCE / EXPLORATORY ANALYSIS",
-      description:
-        "Analyzed meteorite landing data using Python and data analysis techniques to explore patterns, distributions, and trends.",
-      github: "https://github.com/Sayuminahettiarachchi/Meteorite_Landings",
+      github:
+        "https://github.com/Sayuminahettiarachchi/Meteorite_Landings",
       live: "#",
     },
     {
       image: "/projects/Screenshot (917).png",
       title: "AI Career Recommendation System",
       type: "RECOMMENDATION SYSTEM / WEB DEVELOPMENT",
-      description:
-        "A web-based recommendation system that helps users explore career options based on their interests and skills.",
       github:
         "https://github.com/Sayuminahettiarachchi/AI-Career-Recommendation",
       live: "https://sayumina.pythonanywhere.com/",
@@ -34,11 +31,9 @@ export default function Projects() {
       image: "/projects/Screenshot (943).png",
       title: "Telecom Intelligence",
       type: "MACHINE LEARNING / CUSTOMER CHURN PREDICTION",
-      description:
-        "A machine learning platform that predicts telecom customer churn, analyzes customer behavior, and identifies at-risk customers to support customer retention.",
       github:
         "https://github.com/Sayuminahettiarachchi/telecom-churn-prediction",
-      live: "#",
+     live: "#",
     },
   ];
 
@@ -56,7 +51,6 @@ export default function Projects() {
               image={project.image}
               title={project.title}
               type={project.type}
-              description={project.description}
               github={project.github}
               live={project.live}
             />
