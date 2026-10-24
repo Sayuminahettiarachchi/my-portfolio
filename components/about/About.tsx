@@ -1,3 +1,4 @@
+
 export default function About() {
   return (
     <section
@@ -9,38 +10,31 @@ export default function About() {
         py-20
       "
     >
-
       <div
         className="
-        max-w-6xl
-        mx-auto
-        grid
-        md:grid-cols-2
-        gap-12
-        items-center
+          max-w-6xl
+          mx-auto
+          grid
+          md:grid-cols-2
+          gap-12
+          items-center
         "
       >
-
         {/* LEFT SIDE */}
-
         <div>
-
           <h2 className="text-4xl md:text-5xl font-bold">
-
             ABOUT{" "}
             <span className="text-cyan-400">
               ME
             </span>
-
           </h2>
-
 
           <p
             className="
-            text-gray-300
-            mt-6
-            leading-relaxed
-            text-base
+              text-gray-300
+              mt-6
+              leading-relaxed
+              text-base
             "
           >
             I am Sayumina Hettiarachchi, HND Computer Science with AI
@@ -51,14 +45,12 @@ export default function About() {
             real-world problems.
           </p>
 
-
-
           <p
             className="
-            text-gray-300
-            mt-5
-            leading-relaxed
-            text-base
+              text-gray-300
+              mt-5
+              leading-relaxed
+              text-base
             "
           >
             My technical interests include developing intelligent
@@ -69,126 +61,90 @@ export default function About() {
             clean, efficient code and continuously learning new technologies.
           </p>
 
-
-
           {/* BUTTONS */}
-
-          <div className="flex gap-5 mt-8">
-
-
-            <button
+          <div className="flex flex-wrap gap-5 mt-8">
+            <a
+              href="/resume.pdf"
+              download="Sayumina_Hettiarachchi_Resume.pdf"
               className="
-              bg-cyan-400
-              text-black
-              px-8
-              py-3
-              rounded-full
-              font-bold
-              hover:shadow-[0_0_25px_#22d3ee]
-              transition
+                inline-flex
+                items-center
+                justify-center
+                bg-cyan-400
+                text-black
+                px-8
+                py-3
+                rounded-full
+                font-bold
+                hover:shadow-[0_0_25px_#22d3ee]
+                transition
               "
             >
               DOWNLOAD RESUME
-            </button>
-
-
+            </a>
 
             <a
               href="#contact"
               className="
-              border
-              border-cyan-400
-              text-cyan-400
-              px-8
-              py-3
-              rounded-full
-              font-bold
-              hover:bg-cyan-400
-              hover:text-black
-              transition
+                inline-flex
+                items-center
+                justify-center
+                border
+                border-cyan-400
+                text-cyan-400
+                px-8
+                py-3
+                rounded-full
+                font-bold
+                hover:bg-cyan-400
+                hover:text-black
+                transition
               "
             >
               GET IN TOUCH
             </a>
-
-
           </div>
-
-
         </div>
 
-
-
-
-
         {/* RIGHT SIDE IMAGE */}
-
         <div className="flex justify-center md:justify-end">
-
-
           <div
             className="
-            w-72
-            h-72
-            md:w-96
-            md:h-96
-            rounded-full
-            border-4
-            border-cyan-400
-            shadow-[0_0_40px_#22d3ee]
-            overflow-hidden
+              w-72
+              h-72
+              md:w-96
+              md:h-96
+              rounded-full
+              border-4
+              border-cyan-400
+              shadow-[0_0_40px_#22d3ee]
+              overflow-hidden
             "
           >
-
             <img
               src="/profile%20(2).jpg"
               alt="Sayumina Hettiarachchi"
-              className="
-              w-full
-              h-full
-              object-cover
-              "
+              className="w-full h-full object-cover"
             />
-
           </div>
-
-
         </div>
-
-
       </div>
 
-
-
-
-      {/* DYNAMIC LINE - LOWER POSITION */}
-
-      <div
-        className="
-        max-w-6xl
-        mx-auto
-        mt-24
-        mb-8
-        "
-      >
-
+      {/* DYNAMIC LINE */}
+      <div className="max-w-6xl mx-auto mt-24 mb-8">
         <div
           className="
-          h-[3px]
-          w-full
-          bg-gradient-to-r
-          from-transparent
-          via-cyan-400
-          to-transparent
-          animate-pulse
-          shadow-[0_0_20px_#22d3ee]
+            h-[3px]
+            w-full
+            bg-gradient-to-r
+            from-transparent
+            via-cyan-400
+            to-transparent
+            animate-pulse
+            shadow-[0_0_20px_#22d3ee]
           "
         />
-
       </div>
-
-
-
     </section>
   );
 }
