@@ -1,8 +1,8 @@
+
 interface ProjectCardProps {
   image: string;
   title: string;
   type: string;
-  description: string;
   github?: string;
   live?: string;
 }
@@ -11,7 +11,6 @@ export default function ProjectCard({
   image,
   title,
   type,
-  description,
   github,
   live,
 }: ProjectCardProps) {
@@ -38,16 +37,14 @@ export default function ProjectCard({
         />
       </div>
 
-      {/* Text */}
+      {/* Title and category only */}
       <div className="mt-5 flex-1">
-        <p className="text-cyan-400 text-xs font-semibold uppercase tracking-widest">
+        <h3 className="text-white font-bold text-lg leading-tight">
+          {title}
+        </h3>
+
+        <p className="text-cyan-400 text-xs font-semibold uppercase tracking-widest mt-3">
           {type}
-        </p>
-
-        <h3 className="text-white font-bold text-xl mt-2">{title}</h3>
-
-        <p className="text-gray-400 text-base leading-relaxed mt-3">
-          {description}
         </p>
       </div>
 
@@ -63,6 +60,7 @@ export default function ProjectCard({
             GitHub
           </a>
         )}
+
         {live && live !== "#" && (
           <a
             href={live}
