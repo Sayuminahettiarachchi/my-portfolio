@@ -1,24 +1,23 @@
-import { FaGithub, FaExternalLinkAlt } from "react-icons/fa";
+import { FaGithub } from "react-icons/fa";
+import { FaExternalLinkAlt } from "react-icons/fa";
 
-interface ProjectCardProps {
+type ProjectCardProps = {
   image: string;
   title: string;
   type: string;
-  description: string;
   github: string;
   live: string;
-}
+};
 
 export default function ProjectCard({
   image,
   title,
   type,
-  description,
   github,
   live,
 }: ProjectCardProps) {
   return (
-    <div className="bg-[#111827] border border-gray-700 rounded-3xl p-5 hover:border-cyan-400 hover:shadow-[0_0_25px_#22d3ee] transition">
+    <div className="bg-[#111827] border border-gray-700 rounded-3xl p-5 hover:border-cyan-400 hover:shadow-[0_0_20px_rgba(34,211,238,0.1)] transition duration-300">
       {/* Project image */}
       <img
         src={image}
@@ -36,10 +35,6 @@ export default function ProjectCard({
           {type}
         </p>
 
-        <p className="text-gray-300 text-sm mt-3 leading-relaxed">
-          {description}
-        </p>
-
         {/* Icon links */}
         <div className="flex gap-3 mt-5">
           <a
@@ -47,7 +42,7 @@ export default function ProjectCard({
             target="_blank"
             rel="noopener noreferrer"
             aria-label={`View ${title} source code on GitHub`}
-            className="w-11 h-11 rounded-full bg-gray-800 flex items-center justify-center text-white hover:bg-cyan-400 hover:text-black transition"
+            className="w-11 h-11 rounded-full bg-gray-800 flex items-center justify-center text-white hover:bg-cyan-600 transition"
           >
             <FaGithub />
           </a>
@@ -58,7 +53,7 @@ export default function ProjectCard({
               target="_blank"
               rel="noopener noreferrer"
               aria-label={`View ${title} live demo`}
-              className="w-11 h-11 rounded-full bg-gray-800 flex items-center justify-center text-white hover:bg-cyan-400 hover:text-black transition"
+              className="w-11 h-11 rounded-full bg-gray-800 flex items-center justify-center text-white hover:bg-cyan-600 transition"
             >
               <FaExternalLinkAlt />
             </a>
