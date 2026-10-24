@@ -25,10 +25,10 @@ export default function CertificateCard({
   grade,
 }: CertificateCardProps) {
   return (
-    <div className="group flex h-[293px] w-full max-w-[357px] mx-auto flex-col overflow-hidden rounded-[2.5rem] border border-[rgba(45,212,191,0.08)] bg-[#111815] shadow-[0_10px_30px_rgba(0,0,0,0.15)] transition-all duration-300 hover:border-[rgba(45,212,191,0.4)] hover:shadow-[0_10px_30px_rgba(45,212,191,0.08)]">
+    <div className="group flex h-[293px] w-full max-w-[357px] mx-auto flex-col overflow-hidden rounded-[2.5rem] border border-blue-400/10 bg-[#111827] shadow-[0_10px_30px_rgba(0,0,0,0.15)] transition-all duration-300 hover:border-blue-400/40 hover:shadow-[0_10px_30px_rgba(59,130,246,0.12)]">
 
       {/* Certificate image */}
-      <div className="relative h-[115px] w-full shrink-0 overflow-hidden bg-[#0d1411]">
+      <div className="relative h-[115px] w-full shrink-0 overflow-hidden bg-[#0B1120]">
         {image ? (
           <img
             src={image}
@@ -37,14 +37,14 @@ export default function CertificateCard({
           />
         ) : (
           <div className="flex h-full w-full flex-col items-center justify-center gap-2">
-            <div className="flex h-11 w-11 items-center justify-center rounded-full border border-[rgba(45,212,191,0.25)] bg-[rgba(45,212,191,0.08)]">
+            <div className="flex h-11 w-11 items-center justify-center rounded-full border border-blue-400/25 bg-blue-400/10">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 width="22"
                 height="22"
                 viewBox="0 0 24 24"
                 fill="none"
-                stroke="#2DD4BF"
+                stroke="#60A5FA"
                 strokeWidth="1.7"
                 strokeLinecap="round"
                 strokeLinejoin="round"
@@ -54,7 +54,7 @@ export default function CertificateCard({
               </svg>
             </div>
 
-            <span className="text-[10px] font-semibold uppercase tracking-[0.18em] text-[#2DD4BF]">
+            <span className="text-[10px] font-semibold uppercase tracking-[0.18em] text-blue-400">
               {badge || issued || "Academic qualification"}
             </span>
           </div>
@@ -67,7 +67,7 @@ export default function CertificateCard({
           {title}
         </h3>
 
-        <p className="mt-2 line-clamp-1 text-[10px] font-semibold uppercase tracking-wider text-[#2DD4BF]">
+        <p className="mt-2 line-clamp-1 text-[10px] font-semibold uppercase tracking-wider text-blue-400">
           {organization}
         </p>
 
@@ -79,26 +79,26 @@ export default function CertificateCard({
         <div className="mt-auto flex flex-wrap items-center gap-x-3 gap-y-1 border-t border-white/10 pt-3">
           {awardDate && (
             <span className="text-[10px] text-gray-400">
-              <span className="font-semibold text-[#2DD4BF]">Awarded:</span>{" "}
+              <span className="font-semibold text-blue-400">Awarded:</span>{" "}
               {awardDate}
             </span>
           )}
 
           {gpa && (
             <span className="text-[10px] text-gray-400">
-              <span className="font-semibold text-[#2DD4BF]">GPA:</span>{" "}
+              <span className="font-semibold text-blue-400">GPA:</span>{" "}
               {gpa}
             </span>
           )}
 
           {grade && (
-            <span className="text-[10px] font-semibold text-[#2DD4BF]">
+            <span className="text-[10px] font-semibold text-blue-400">
               {grade}
             </span>
           )}
 
           {issued && (
-            <span className="text-[10px] font-semibold text-[#2DD4BF]">
+            <span className="text-[10px] font-semibold text-blue-400">
               {issued}
             </span>
           )}

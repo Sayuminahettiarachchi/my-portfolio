@@ -1,65 +1,78 @@
-import { FaGithub, FaExternalLinkAlt } from "react-icons/fa";
-
-type ProjectCardProps = {
+interface ProjectCardProps {
   image: string;
   title: string;
   type: string;
-  github: string;
-  live: string;
-};
+  description: string;
+  github?: string;
+  live?: string;
+}
 
 export default function ProjectCard({
   image,
   title,
   type,
+  description,
   github,
   live,
 }: ProjectCardProps) {
   return (
-    <div className="group w-full max-w-[357px] h-[293px] mx-auto  border border-[rgba(45,212,191,0.08)] rounded-[2.5rem] overflow-hidden shadow-[0_10px_30px_rgba(0,0,0,0.15)] hover:border-[rgba(45,212,191,0.4)] hover:shadow-[0_10px_30px_rgba(45,212,191,0.08)] transition-all duration-300">
-      {/* Project image */}
-      <div className="w-full h-[155px] overflow-hidden">
+    <div
+      className="
+        flex flex-col
+        bg-[#111827]
+        border border-gray-700
+        rounded-3xl
+        p-5
+        hover:border-cyan-400
+        hover:shadow-[0_0_25px_#22d3ee]
+        hover:-translate-y-2
+        transition
+      "
+    >
+      {/* Image box */}
+      <div className="h-52 w-full overflow-hidden rounded-2xl bg-white">
         <img
           src={image}
-          alt={`${title} project preview`}
-          className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
+          alt={title}
+          className="h-full w-full object-cover"
         />
       </div>
 
-      {/* Project details */}
-      <div className="p-5">
-        <h3 className="text-[#F1F5F3] font-bold text-base leading-snug line-clamp-2">
-          {title}
-        </h3>
-
-        <p className="text-blue-400 text-[10px] font-semibold tracking-wider mt-2 uppercase line-clamp-2">
+      {/* Text */}
+      <div className="mt-5 flex-1">
+        <p className="text-cyan-400 text-xs font-semibold uppercase tracking-widest">
           {type}
         </p>
 
-        {/* Project links */}
-        <div className="flex items-center gap-3 mt-3">
+        <h3 className="text-white font-bold text-xl mt-2">{title}</h3>
+
+        <p className="text-gray-400 text-base leading-relaxed mt-3">
+          {description}
+        </p>
+      </div>
+
+      {/* Footer buttons */}
+      <div className="mt-5 flex items-center gap-3 border-t border-gray-700 pt-4 text-sm">
+        {github && (
           <a
             href={github}
             target="_blank"
             rel="noopener noreferrer"
-            aria-label={`View ${title} on GitHub`}
-            className="w-9 h-9 rounded-full bg-white/5 border border-white/10 flex items-center justify-center text-[#F1F5F3]  transition-all duration-200"
+            className="rounded-lg border border-cyan-400/40 bg-cyan-400/10 px-4 py-2 font-semibold text-cyan-400 hover:bg-cyan-400 hover:text-black transition"
           >
-            <FaGithub size={15} />hover:bg-blue-400 hover:text-[#0B1120] hover:border-blue-400
+            GitHub
           </a>
-
-          {live !== "#" && (
-            <a
-              href={live}
-              target="_blank"
-              rel="noopener noreferrer"
-              aria-label={`View ${title} live demo`}
-              className="w-9 h-9 rounded-full bg-white/5 border border-white/10 flex items-center justify-center text-[#F1F5F3] hover:bg-[#2DD4BF] hover:text-[#0A0F0D] hover:border-[#2DD4BF] transition-all duration-200"
-            >
-              <FaExternalLinkAlt size={13} />
-            </a>
-          )}
-        </div>
+        )}
+        {live && live !== "#" && (
+          <a
+            href={live}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="rounded-lg border border-gray-600 px-4 py-2 font-semibold text-gray-300 hover:border-cyan-400 hover:text-cyan-400 transition"
+          >
+            Live Demo
+          </a>
+        )}
       </div>
     </div>
   );
