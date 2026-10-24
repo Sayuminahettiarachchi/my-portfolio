@@ -1,3 +1,4 @@
+
 import Navbar from "@/components/navbar/Navbar";
 import Hero from "@/components/hero/Hero";
 import About from "@/components/about/About";
@@ -28,8 +29,8 @@ export default function Home() {
         {/* CERTIFICATIONS */}
         <Certifications />
 
-        {/* FULL WIDTH THIN CYAN DIVIDER */}
-        <div className="w-full my-6">
+        {/* THIN CYAN DIVIDER WITH LESS SPACE */}
+        <div className="w-full my-1">
           <div className="h-[1px] w-full bg-cyan-400"></div>
         </div>
 
