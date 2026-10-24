@@ -4,7 +4,6 @@ type Project = {
   image: string;
   title: string;
   type: string;
-  description: string;
   github: string;
   live: string;
 };
@@ -56,7 +55,6 @@ export default function Projects() {
               image={project.image}
               title={project.title}
               type={project.type}
-              description={project.description}
               github={project.github}
               live={project.live}
             />
